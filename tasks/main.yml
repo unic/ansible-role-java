@@ -29,6 +29,10 @@
   when: ansible_os_family == 'FreeBSD'
   static: no
 
+- include: setup-Suse.yml
+  when: ansible_os_family == 'Suse'
+  static: no
+
 # Environment setup.
 - name: Set JAVA_HOME if configured.
   template:
